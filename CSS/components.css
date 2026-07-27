@@ -1,0 +1,485 @@
+/*Resusable UI pieces
+    -Logo
+    -Buttons
+    -Navigation
+    -Orbit
+    -Decorative Elements
+    -Cards
+    -Footer
+    -Utility Classes
+*/
+
+/* =====================================LOGO===================================== */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.logo-text {
+    font-family: var(--heading-font);
+    font-size: var(--text-xl);
+    font-weight: var(--weight-bold);
+
+    letter-spacing: var(--letter-wide);
+
+    color: var(--pearl-white);
+
+    transition:
+        color var(--transition-medium) var(--ease-in-out);
+}
+
+.logo:hover .logo-text {
+
+    color: var(--soft-orchid);
+
+}
+
+/*=====================================BUTTONS===================================== */
+.btn {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: var(--button-height);
+
+    padding: var(--button-padding);
+
+    gap: var(--button-gap);
+
+    font-family: var(--body-font);
+    font-size: var(--text-md);
+    font-weight: var(--weight-medium);
+
+    text-decoration: none;
+
+    border: var(--button-border);
+    border-radius: var(--radius-pill);
+
+    cursor: pointer;
+
+    transition:
+        all var(--transition-medium) var(--ease-in-out);
+
+}
+
+
+/* Primary Button */
+
+.btn-primary {
+
+    background: var(--button-gradient);
+
+    color: var(--midnight-violet);
+
+    box-shadow:
+        var(--highlight-chrome),
+        var(--shadow-medium);
+
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        var(--highlight-chrome),
+        var(--shadow-deep);
+
+}
+
+/* Secondary Button */
+
+.btn-secondary {
+
+    background: transparent;
+
+    color: var(--pearl-white);
+
+    border: 2px solid var(--chrome-silver);
+
+}
+
+.btn-secondary:hover {
+
+    background: var(--glass-white);
+
+    backdrop-filter: blur(var(--blur-small));
+
+}
+
+/* Hire Me pill (nav) */
+.hire-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: .5rem;
+
+    padding: .75rem 1.5rem;
+
+    border-radius: var(--radius-pill);
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(var(--blur-small));
+
+    -webkit-backdrop-filter: blur(var(--blur-small));
+
+    border: 1px solid rgba(255, 255, 255, .18);
+
+    color: var(--pearl-white);
+
+    text-decoration: none;
+
+    transition: all .35s ease;
+
+}
+
+.hire-btn:hover {
+
+    background: rgba(255, 255, 255, .15);
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--glow-lavender);
+
+}
+
+/* =====================================NAVIGATION===================================== */
+.navbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-lg);
+
+    list-style: none;
+
+}
+
+.nav-links a {
+
+    font-family: var(--body-font);
+
+    font-size: var(--text-md);
+
+    color: var(--pearl-white);
+
+    text-decoration: none;
+
+    transition:
+        color var(--transition-fast) var(--ease-in-out);
+
+}
+
+.nav-links a:hover {
+
+    color: var(--soft-orchid);
+
+}
+
+
+/*==================================================CARDS==================================================*/
+.card {
+
+    background: var(--glass-white);
+
+    backdrop-filter: blur(var(--blur-medium));
+
+    border-radius: var(--radius-large);
+
+    box-shadow: var(--shadow-soft);
+
+    padding: var(--space-lg);
+
+}
+
+.glass-card {
+
+    position: relative;
+
+    background: var(--glass-white);
+
+    backdrop-filter: blur(var(--blur-large));
+    -webkit-backdrop-filter: blur(var(--blur-large));
+
+    border: 1px solid rgba(255, 255, 255, .18);
+
+    border-radius: var(--radius-large);
+
+    box-shadow:
+        var(--shadow-medium),
+        inset 0 1px 1px rgba(255, 255, 255, .25);
+
+    overflow: hidden;
+
+}
+
+/* top glass highlight sheen, shared by every .glass-card */
+.glass-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 45%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, .22),
+            transparent);
+
+    pointer-events: none;
+
+}
+
+
+.glass-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: -30%;
+    left: -60%;
+
+    width: 45%;
+    height: 180%;
+
+    background: linear-gradient(110deg,
+            transparent 20%,
+            rgba(255, 255, 255, .08) 45%,
+            rgba(255, 255, 255, .18) 50%,
+            rgba(255, 255, 255, .08) 55%,
+            transparent 80%);
+
+    transform: rotate(18deg);
+
+    opacity: 0;
+
+    transition:
+        left .8s ease,
+        opacity .5s ease;
+
+    pointer-events: none;
+
+}
+
+.glass-card:hover::after {
+
+    left: 115%;
+
+    opacity: 1;
+
+}
+
+/* smaller / lower-emphasis glass surface */
+.glass-card-soft {
+
+    background: var(--glass-white);
+
+    backdrop-filter: blur(var(--blur-medium));
+    -webkit-backdrop-filter: blur(var(--blur-medium));
+
+    border: 1px solid rgba(255, 255, 255, .18);
+
+    border-radius: var(--radius-medium);
+
+    box-shadow: var(--shadow-soft);
+
+}
+
+.glass-card,
+.glass-card-soft,
+.timeline-card {
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
+
+}
+
+.glass-card:hover,
+.glass-card-soft:hover,
+.timeline-card:hover {
+
+    transform:
+        translateY(-10px) scale(1.02);
+
+    border-color:
+        rgba(255, 255, 255, .35);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .28),
+        0 0 30px rgba(138, 95, 183, .35),
+        inset 0 1px 2px rgba(255, 255, 255, .25);
+
+}
+
+
+/*==================================================FOOTER==================================================*/
+.site-footer {
+
+    padding:
+        var(--space-xl) 0;
+
+}
+
+.footer-container {
+
+    width: var(--section-width);
+
+    max-width: var(--container-width);
+
+    margin: auto;
+
+}
+
+.footer-nav ul {
+
+    list-style: none;
+
+}
+
+.footer-nav a {
+
+    text-decoration: none;
+
+    color: var(--pearl-white);
+
+}
+
+.social-links {
+
+    display: flex;
+
+    gap: var(--space-md);
+
+}
+
+.social-links a {
+
+    text-decoration: none;
+
+    color: var(--pearl-white);
+
+}
+
+.footer-bottom {
+
+    margin-top: var(--space-lg);
+
+    text-align: center;
+
+}
+
+
+/*==================================================DECORATIVE ELEMENTS==================================================*/
+.star {
+
+    position: absolute;
+
+    width: var(--star-small);
+
+    aspect-ratio: 1;
+
+}
+
+.star.medium {
+
+    width: var(--star-medium);
+
+}
+
+.star.large {
+
+    width: var(--star-large);
+
+}
+
+
+/*==================================================UTILITIES==================================================*/
+.text-center {
+
+    text-align: center;
+
+}
+
+.flex {
+
+    display: flex;
+
+}
+
+.flex-center {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.hidden {
+
+    display: none;
+
+}
+
+/* Gradient */
+.text-gradient {
+
+    background: var(--heading-gradient);
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+
+}
+
+/* Eyebrow label — small uppercase kicker used above page headings */
+.developer-title {
+
+    font-family: var(--code-font);
+
+    font-size: var(--text-lg);
+
+    font-weight: var(--weight-medium);
+
+    letter-spacing: var(--letter-wide);
+
+    text-transform: uppercase;
+
+    color: var(--cyber-blue);
+
+}

@@ -1,0 +1,442 @@
+/*==================================================
+                    SKILLS HERO
+==================================================*/
+
+.skills-hero {
+    width: min(90%, var(--container-width));
+
+    margin: 10rem auto 5rem;
+
+    text-align: center;
+}
+
+.skills-hero .developer-title {
+    margin-bottom: .8rem;
+
+    color: var(--willow-green);
+}
+
+.skills-hero h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+
+    font-family: var(--heading-font);
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.1;
+
+    letter-spacing: var(--letter-tight);
+}
+
+
+.skills-hero h1 span {
+
+    background: var(--heading-gradient);
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+
+}
+
+.hero-ampersand {
+
+    color: var(--pearl-white);
+
+    font-size: 1.3em;
+
+    margin: 0 .2rem;
+
+    display: inline-block;
+
+    transform: translateY(.08em);
+
+}
+
+.skills-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        radial-gradient(circle, #ffffff 1px, transparent 1px),
+        radial-gradient(circle, #67BFFF 1px, transparent 1px),
+        radial-gradient(circle, #AAD480 1px, transparent 1px);
+
+    background-size:
+
+        140px 140px,
+        220px 220px,
+        300px 300px;
+
+    opacity: .35;
+
+    pointer-events: none;
+
+}
+
+/*==================================================
+                    SKILLS SECTION
+==================================================*/
+
+.skills-wrapper {
+
+    width: min(90%, var(--container-width));
+
+    margin: auto;
+
+    display: grid;
+
+    gap: 2rem;
+
+}
+
+.skill-card {
+
+    padding: 2.5rem;
+
+}
+
+/*==================================================
+                    CARD HEADER
+==================================================*/
+
+.card-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.25rem;
+
+    margin-bottom: 2rem;
+
+}
+
+.card-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 1.4rem;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, .06);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    backdrop-filter: blur(8px);
+
+}
+
+.card-title h2 {
+
+    font-size: 1.6rem;
+
+    font-weight: 600;
+
+    color: var(--soft-orchid);
+
+}
+
+
+
+
+
+/*==================================================
+                    TAGS
+==================================================*/
+
+.skill-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+}
+
+.skill-tags span {
+
+    padding: .85rem 1.6rem;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    backdrop-filter: blur(10px);
+
+    color: var(--pearl-white);
+
+    font-weight: 500;
+
+    transition: .35s ease;
+
+}
+
+.skill-tags span:hover {
+
+    transform: translateY(-4px);
+
+    color: var(--cyber-blue);
+
+    border-color: rgba(103, 191, 255, .5);
+
+    box-shadow: var(--glow-cyber);
+
+}
+
+/*==================================================
+                CORE PROFICIENCY
+==================================================*/
+
+.proficiency-section {
+
+    width: min(90%, var(--container-width));
+
+    margin: 4rem auto;
+
+    padding: 3rem;
+
+}
+
+.proficiency-title {
+
+    text-align: center;
+
+    font-family: var(--code-font);
+
+    letter-spacing: .25em;
+
+    font-size: 1.3rem;
+
+    color: var(--soft-orchid);
+
+    margin-bottom: 3rem;
+
+}
+
+/*==================================================
+                    GRID
+==================================================*/
+
+.proficiency-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 3rem;
+
+}
+
+/*==================================================
+                PROGRESS ITEM
+==================================================*/
+
+.progress-item {
+
+    margin-bottom: 2rem;
+
+}
+
+.progress-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: .8rem;
+
+    font-size: 1.05rem;
+
+    font-weight: 500;
+
+}
+
+.progress-info span:last-child {
+
+    color: var(--chrome-silver);
+
+    font-family: var(--code-font);
+
+}
+
+/*==================================================
+                PROGRESS BAR
+==================================================*/
+
+.progress-bar {
+
+    height: 10px;
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, .08);
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+}
+
+/*==================================================
+            ANIMATED FILL
+==================================================*/
+
+.progress-fill {
+
+    height: 100%;
+
+    width: 0;
+
+    border-radius: 999px;
+
+    animation: loadBar 2s ease forwards;
+
+}
+
+/*==================================================
+                INDIVIDUAL COLORS
+==================================================*/
+
+.html {
+
+    width: 90%;
+
+    background: linear-gradient(90deg,
+            #8EE7FF,
+            var(--cyber-blue));
+}
+
+.react {
+
+    width: 72%;
+
+    background: linear-gradient(90deg,
+            #F5C4FF,
+            var(--soft-orchid));
+}
+
+.git {
+
+    width: 70%;
+
+    background: linear-gradient(90deg,
+            #D6ECFF,
+            #A6D8FF);
+}
+
+.javascript {
+
+    width: 78%;
+
+    background: linear-gradient(90deg,
+            #B9F48B,
+            var(--willow-green));
+}
+
+.responsive {
+
+    width: 85%;
+
+    background: linear-gradient(90deg,
+            #FFF2A6,
+            #F6D365);
+}
+
+.typescript {
+
+    width: 45%;
+
+    background: linear-gradient(90deg,
+            #98E39A,
+            #62C370);
+}
+
+/*==================================================
+                ANIMATION
+==================================================*/
+
+@keyframes loadBar {
+
+    from {
+
+        width: 0;
+
+    }
+
+}
+
+/*==================================================
+                    RESPONSIVE
+==================================================*/
+
+@media (max-width:900px) {
+
+    .proficiency-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .skills-hero h1 {
+
+        font-size: 3rem;
+
+    }
+
+}
+
+@media (max-width:600px) {
+
+    .skills-hero {
+
+        margin-top: 8rem;
+
+    }
+
+    .skill-card {
+
+        padding: 2rem;
+
+    }
+
+    .card-title {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .skill-tags {
+
+        justify-content: center;
+
+    }
+
+    .progress-info {
+
+        font-size: .95rem;
+
+    }
+
+}

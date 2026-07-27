@@ -1,0 +1,267 @@
+/*To store all design system:
+    -color
+    -Fonts
+    -Spacing
+    -Border radius
+    -Shadows
+    -Transitions
+*/
+
+/* ==================================Colors================================== */
+:root {
+    /* primary */
+    --midnight-violet: #24134F;
+    --royal-purple: #472C7A;
+    --lavender-glow: #8A5FB7;
+    --soft-orchid: #D9A5DD;
+
+    /* Secondary */
+    --honeydew: #F0F7EA;
+    --willow-green: #AAD480;
+
+    /* Accent*/
+    --cyber-blue: #67BFFF;
+
+
+    /* Neutral */
+    --pearl-white: #FFFFFF;
+    --off-white: #FAFAFA;
+    --chrome-silver: #EAEAEA;
+    --light-gray: #F5F5F5;
+    --soft-black: #1A1A1A;
+
+    /* Glass */
+    --glass-white: rgba(255, 255, 255, 0.15);
+
+}
+
+/* ==================================Gradients================================== */
+:root {
+
+    --bg-gradient:
+        linear-gradient(135deg,
+            var(--midnight-violet) 0%,
+            var(--royal-purple) 30%,
+            var(--lavender-glow) 60%,
+            var(--cyber-blue) 85%,
+            var(--soft-orchid) 100%);
+
+    --button-gradient:
+        linear-gradient(180deg,
+            #FFFFFF,
+            #EAEAEA);
+
+    --chrome-gradient:
+        linear-gradient(180deg,
+            #FFFFFF,
+            #EAEAEA,
+            #FFFFFF);
+
+    --heading-gradient:
+        linear-gradient(135deg,
+            var(--pearl-white) 0%,
+            var(--soft-orchid) 40%,
+            var(--cyber-blue) 100%);
+
+}
+
+
+/* ==================================Font================================== */
+:root {
+    --heading-font: "Playfair Display", serif;
+
+    --body-font: "Poppins", sans-serif;
+
+    --code-font: "JetBrains Mono", monospace;
+
+}
+
+/* ==================================Font Sizes==================================*/
+:root {
+
+    --text-xs: .75rem;
+    --text-sm: .875rem;
+    --text-md: 1rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.5rem;
+
+    --text-2xl: 2rem;
+    --text-3xl: 3rem;
+    --text-4xl: 4rem;
+    --text-5xl: 5rem;
+
+}
+
+/* ==================================Font Weights==================================*/
+:root {
+
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+}
+
+/* ==================================Letter Spacing==================================*/
+:root {
+
+    --letter-tight: -.03em;
+    --letter-normal: .03em;
+    --letter-wide: .08em;
+
+}
+
+/* ==================================Spacing================================== */
+:root {
+    --space-xxs: .25rem;
+    --space-xs: .5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+    --space-xxl: 8rem;
+}
+
+/* ==================================Layout================================== */
+:root {
+
+    --container-width: 1200px;
+
+    --section-width: 90%;
+
+    --header-height: 80px;
+
+}
+
+/* ==================================Border Radius================================== */
+:root {
+    --radius-xs: .5rem;
+    --radius-small: .75rem;
+    --radius-medium: 1.5rem;
+    --radius-large: 3rem;
+    --radius-pill: 999px;
+}
+
+/* ==================================Shadows================================== */
+:root {
+    --shadow-soft:
+        0 8px 20px rgba(0, 0, 0, .12);
+
+    --shadow-medium:
+        0 15px 35px rgba(0, 0, 0, .18);
+
+    --shadow-deep:
+        0 20px 50px rgba(0, 0, 0, .25);
+}
+
+/* ==================================Glows================================== */
+:root {
+    --glow-white:
+        0 0 20px rgba(255, 255, 255, .35);
+
+    --glow-lavender:
+        0 0 30px rgba(138, 95, 183, .45);
+
+    --glow-cyber:
+        0 0 30px rgba(103, 191, 255, .45);
+
+    --glow-willow:
+        0 0 30px rgba(170, 212, 128, .45);
+
+}
+
+/* ==================================Glass Blur================================== */
+:root {
+
+    --blur-small: 5px;
+
+    --blur-medium: 10px;
+
+    --blur-large: 20px;
+
+}
+
+
+/* ==================================BUTTONS================================== */
+:root {
+
+    /* Size */
+    --button-height: 55px;
+    --button-padding: 1rem 2rem;
+    --button-gap: 1rem;
+
+    /* Appearance */
+    --button-border: 1px solid rgba(255, 255, 255, .4);
+
+    --highlight-chrome:
+        inset 0 2px 4px rgba(255, 255, 255, .75);
+
+}
+
+/* =================================Orbit================================= */
+:root {
+
+    --orbit-size: 420px;
+
+    --orbit-border: 2px;
+
+    --orbit-speed: 40s;
+
+}
+
+/* =================================Decorative Elements================================= */
+:root {
+
+    --star-small: 10px;
+
+    --star-medium: 18px;
+
+    --star-large: 28px;
+
+}
+
+/* =================================Opacity================================= */
+:root {
+
+    --opacity-light: .25;
+
+    --opacity-medium: .5;
+
+    --opacity-strong: .75;
+
+    --opacity-full: 1;
+
+}
+
+/* =================================Z-Index================================= */
+:root {
+
+    --z-background: -1;
+
+    --z-default: 1;
+
+    --z-decoration: 5;
+
+    --z-header: 100;
+
+    --z-modal: 1000;
+
+}
+
+/* =================================Transitions================================= */
+:root {
+
+    --transition-fast: .3s;
+
+    --transition-medium: .5s;
+
+    --transition-slow: 1s;
+
+    --ease-default: ease;
+
+    --ease-in-out: ease-in-out;
+
+    --ease-out: ease-out;
+
+}

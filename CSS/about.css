@@ -1,0 +1,564 @@
+/*==================================================
+                ABOUT / JOURNEY PAGE
+==================================================*/
+
+body {
+
+    min-height: 100vh;
+
+    background: var(--bg-gradient);
+
+    color: var(--pearl-white);
+
+    font-family: var(--body-font);
+
+    overflow-x: hidden;
+
+}
+
+/*==================================================
+                SECTION
+==================================================*/
+
+#journey {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        calc(var(--header-height) + var(--space-md)) 0 var(--space-xl);
+
+}
+
+.journey-container {
+
+    width: var(--section-width);
+
+    max-width: var(--container-width);
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: var(--z-default);
+
+    animation: fadeUp 1s ease;
+
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/*==================================================
+                HEADING
+==================================================*/
+
+.journey-heading {
+
+    text-align: center;
+
+    margin-bottom: var(--space-xl);
+
+}
+
+.journey-heading .developer-title {
+
+    color: var(--willow-green);
+
+}
+
+.journey-heading h1 {
+
+    font-family: var(--heading-font);
+
+    font-size: clamp(2.75rem, 5vw, 4.25rem);
+
+    font-weight: var(--weight-bold);
+
+    line-height: 1.15;
+
+    letter-spacing: var(--letter-tight);
+
+    color: var(--pearl-white);
+
+    text-shadow: 0 0 25px rgba(255, 255, 255, .15);
+
+}
+
+/*==================================================
+                LAYOUT
+==================================================*/
+
+.journey-layout {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+
+/*==================================================
+                PROFILE CARD
+==================================================*/
+
+.profile-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: var(--space-xs);
+
+    padding: var(--space-lg) var(--space-md);
+
+}
+
+/*==================================================
+                PROFILE PHOTO / ORBIT
+==================================================*/
+
+.profile-photo {
+
+    position: relative;
+
+    width: 150px;
+
+    height: 150px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: var(--space-sm);
+
+}
+
+.photo-orbit {
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    border: var(--orbit-border) solid rgba(255, 255, 255, .18);
+
+    box-shadow:
+        0 0 25px rgba(255, 255, 255, .08),
+        inset 0 0 25px rgba(255, 255, 255, .05);
+
+    animation: orbitRotate 35s linear infinite;
+
+}
+
+.profile-photo img {
+
+    position: relative;
+
+    z-index: var(--z-default);
+
+    width: 112px;
+
+    height: 112px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 4px solid rgba(255, 255, 255, .5);
+
+    box-shadow:
+        0 0 20px rgba(255, 255, 255, .3),
+        0 0 40px rgba(138, 95, 183, .4);
+
+}
+
+/*==================================================
+                PROFILE TEXT
+==================================================*/
+
+.profile-card h2 {
+
+    font-family: var(--heading-font);
+
+    font-size: var(--text-2xl);
+
+    font-weight: var(--weight-semibold);
+
+    color: var(--pearl-white);
+
+}
+
+.profile-role {
+
+    font-family: var(--code-font);
+
+    font-size: var(--text-xs);
+
+    font-weight: var(--weight-medium);
+
+    letter-spacing: var(--letter-wide);
+
+    text-transform: uppercase;
+
+    color: var(--willow-green);
+
+    margin-bottom: .4rem;
+
+}
+
+.profile-card p {
+
+    font-size: var(--text-md);
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, .85);
+
+}
+
+/*==================================================
+                HOBBIES CARD
+                
+==================================================*/
+
+.hobbies-card {
+
+    width: 100%;
+
+    margin-top: var(--space-md);
+
+    padding: var(--space-md) var(--space-lg);
+
+    text-align: left;
+
+}
+
+.hobbies-card h3 {
+
+    font-family: var(--code-font);
+
+    font-size: var(--text-xs);
+
+    font-weight: var(--weight-medium);
+
+    letter-spacing: var(--letter-wide);
+
+    text-transform: uppercase;
+
+    color: var(--cyber-blue);
+
+    margin-bottom: var(--space-sm);
+
+}
+
+.hobbies-card ul {
+
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: .6rem;
+
+}
+
+.hobbies-card li {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .6rem;
+
+    font-size: var(--text-md);
+
+    color: rgba(255, 255, 255, .85);
+
+}
+
+.hobbies-card li i {
+
+    color: var(--soft-orchid);
+
+    width: 1.1em;
+
+}
+
+/*==================================================
+                TIMELINE
+==================================================*/
+
+.timeline {
+
+    padding-top: var(--space-sm);
+
+}
+
+.timeline-line {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-lg);
+
+}
+
+.timeline-line::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 9px;
+
+    top: 1.6rem;
+
+    bottom: 1.6rem;
+
+    width: 2px;
+
+    background: linear-gradient(180deg, var(--willow-green), var(--cyber-blue));
+
+    opacity: .4;
+
+}
+
+.timeline:hover .timeline-line::before {
+
+    opacity: 1;
+
+    box-shadow:
+        0 0 15px rgba(170, 212, 128, .5),
+        0 0 30px rgba(103, 191, 255, .4);
+
+}
+
+.timeline:hover .timeline-dot {
+
+    transform: scale(1.15);
+
+    box-shadow:
+        0 0 20px rgba(170, 212, 128, .8),
+        0 0 45px rgba(103, 191, 255, .55);
+
+}
+
+.timeline-item {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: var(--space-md);
+
+}
+
+.timeline-dot {
+
+    flex-shrink: 0;
+
+    width: 20px;
+
+    height: 20px;
+
+    margin-top: 1.5rem;
+
+    border-radius: 50%;
+
+    background: var(--willow-green);
+
+    box-shadow: var(--glow-willow);
+
+    position: relative;
+
+    z-index: var(--z-default);
+
+    animation: dotPulse 3s ease-in-out infinite;
+
+}
+
+.timeline-dot {
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+@keyframes dotPulse {
+
+    0%,
+    100% {
+        box-shadow: var(--glow-willow);
+    }
+
+    50% {
+        box-shadow: 0 0 42px rgba(170, 212, 128, .7);
+    }
+
+}
+
+.timeline-card {
+
+    flex: 1;
+
+    padding: var(--space-sm) var(--space-md);
+
+}
+
+.timeline-card span {
+
+    font-family: var(--code-font);
+
+    font-size: var(--text-xs);
+
+    font-weight: var(--weight-medium);
+
+    letter-spacing: var(--letter-wide);
+
+    text-transform: uppercase;
+
+    color: var(--cyber-blue);
+
+}
+
+.timeline-card h3 {
+
+    font-family: var(--heading-font);
+
+    font-size: var(--text-xl);
+
+    font-weight: var(--weight-semibold);
+
+    margin: .5rem 0 .6rem;
+
+    color: var(--pearl-white);
+
+}
+
+.timeline-card p {
+
+    font-size: var(--text-md);
+
+    line-height: 1.75;
+
+    color: rgba(255, 255, 255, .82);
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:992px) {
+
+    .journey-layout {
+
+        gap: var(--space-lg);
+
+    }
+
+}
+
+@media(max-width:900px) {
+
+    .journey-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .right-column {
+        width: 100%;
+    }
+
+    .profile-card {
+
+        max-width: 420px;
+
+        margin: 0 auto;
+
+    }
+
+
+    .timeline-line::before {
+
+        left: 9px;
+
+    }
+
+}
+
+@media(max-width:576px) {
+
+    #journey {
+
+        padding-top: calc(var(--header-height) + var(--space-sm));
+
+    }
+
+    .journey-heading h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+    .profile-card {
+
+        padding: var(--space-md);
+
+    }
+
+    .hobbies-card {
+
+        padding: var(--space-md);
+
+    }
+
+    .timeline-item {
+
+        gap: var(--space-sm);
+
+    }
+
+    .timeline-card {
+
+        padding: var(--space-sm);
+
+    }
+
+}
